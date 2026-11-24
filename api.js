@@ -1,4 +1,5 @@
 function createOrder(order) {
+  console.log("[API] Processing order");
   if (!order.productId) {
     return {
       success: false,
