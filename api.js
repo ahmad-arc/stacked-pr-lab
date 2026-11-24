@@ -3,14 +3,20 @@ function createOrder(order) {
   if (!order.productId) {
     return {
       success: false,
-      error: "Product ID is required"
+      error: {
+        code: "ERR_MISSING_PRODUCT_ID",
+        message: "Product ID is required"
+      }
     };
   }
 
   if (order.quantity <= 0) {
     return {
       success: false,
-      message: "Invalid quantity"
+      error: {
+        code: "INVALID_QUANTITY",
+        message: "Quantity must be greater than zero"
+      }
     };
   }
 
