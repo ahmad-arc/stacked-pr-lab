@@ -4,7 +4,7 @@ function createOrder(order) {
     return {
       success: false,
       error: {
-        code: "MISSING_PRODUCT_ID",
+        code: "ERR_MISSING_PRODUCT_ID",
         message: "Product ID is required"
       }
     };
