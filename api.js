@@ -4,7 +4,7 @@ function createOrder(order) {
     return {
       success: false,
       error: {
-        code: "INVALID_PRODUCT",
+        code: "MISSING_PRODUCT_ID",
         message: "Product ID is required"
       }
     };
@@ -15,7 +15,7 @@ function createOrder(order) {
       success: false,
       error: {
         code: "INVALID_QUANTITY",
-        message: "Invalid quantity"
+        message: "Quantity must be greater than zero"
       }
     };
   }
