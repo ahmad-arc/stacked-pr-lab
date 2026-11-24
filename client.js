@@ -1,8 +1,8 @@
 function handleResponse(response) {
   if (!response.success) {
     return {
-      code: "UNKNOWN",
-      message: response.error || "Something went wrong"
+      code: response.error.code,
+      message: response.error.message
     };
   }
 
